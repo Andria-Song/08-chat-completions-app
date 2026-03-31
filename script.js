@@ -40,7 +40,10 @@ async function main() {
     // Send model details and system message
     body: JSON.stringify({
       model: 'gpt-4o',
-      messages: conversationHistory
+      messages: conversationHistory,
+      max_completion_tokens: 800,
+      temperature: 0.5,
+      frequency_penalty: 0.2,
     })
   });
 
